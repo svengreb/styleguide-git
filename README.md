@@ -35,6 +35,46 @@ The cardinal rule for creating good commits is to **ensure there is only one log
   * Newly written code can often be split up into multiple pieces that can be independently reviewed. For example, changes which add new internal APIs/classes, can be in self-contained commits leading to easier code review and allows other developers to cherry-pick small parts of the work, if the entire new feature is not immediately ready for merge.
   * Code that affects public APIs should be done in commits separate from the actual internal implementation. This will encourage the author and reviewers to think about the generic API design, and not simply pick a design that is easier for their currently chosen internal implementation.
 
+## Commit Messages
+
+> The commit message must contain all the information required to fully understand & review the patch. *Less is not more*.
+
+As important as the content of the change, is the content of the commit message describing it. The purpose of a commit message is to summarize a change, but the purpose of summarizing a change is to help to understand the code. The information to be put into a message should be valuable and useful for reviewers and the projects community.
+
+Having a story in the Git history will make a huge difference in how others perceive the project. Taking great care in commit messages will help to increase the long-term overall quality.
+
+* **The first line is important**. The [message summary](#message-summary) of the commit has special significance. It is used in many places like the Git history headline, git annotate- and merge messages or email subject lines where space is at a premium. As well as summarizing the change itself, it should take care to detail what part of the code is affected.
+* **Describe the intent and motivation behind the changes**. Describe *why* the code has been written this way and document the overall code structure in the [message body](#message-body), particularly for large changes.
+* **Include the GitHub issue ID and additional references** in the [message footer](#message-footer). This will automatically fire some hooks to track the commit in related GitHub repository issues- and pull requests and is **required to contribute to a project**.
+* **Reviewers can understand what the original problem was**. The commit message should have a clear statement as to what the original problem is. The GitHub issue ID is merely interesting historical background on *how* the problem was identified and has been discussed within the community, but it should be possbile to review a proposed patch for correctness without having to read the whole ticket.
+
+### Elements and their Structure
+
+A Git commit message follows this format:
+```
+<summary>
+
+<body>
+
+<footer>
+```
+
+#### Message Summary
+
+The first line is the one-sentence concise subject about the changes introduced by the commit. The **optimal total size of characters is 50 or less**, but is **limited to 72 characters** and **does not ended with a period**. It uses the **imperative mood** and is **separated from the [message body](#message-body) by a single blank line**.
+
+Technical details that cannot be expressed in these strict size constraints should be put in the message body instead.
+
+#### Message Body
+
+The detailed description about the changes of the commit should be split into **multiple logically separate paragraphs** if necessary. It uses the **imperative mood** and the lines are **wrapped at 72 characters**.
+
+#### Message Footer
+
+This metadata block **must contain the GitHub issue ID** and is **separated from the [message body](#message-body) by a single blank line**.
+
+**Multiple issues are separated by a comma** and **additional references** can be added in the next lines.
+
 ## Development
 
 [![](https://img.shields.io/badge/Changelog-0.0.0-81A1C1.svg?style=flat-square)](https://github.com/arcticicestudio/styleguide-git/blob/v0.0.0/CHANGELOG.md) [![](https://img.shields.io/badge/Workflow-gitflow--branching--model-81A1C1.svg?style=flat-square)](http://nvie.com/posts/a-successful-git-branching-model) [![](https://img.shields.io/badge/Versioning-ArcVer_0.8.0-81A1C1.svg?style=flat-square)](https://github.com/arcticicestudio/arcver)
