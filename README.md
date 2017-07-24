@@ -1,6 +1,6 @@
 <p align="center"><img src="https://rawgit.com/arcticicestudio/styleguide-git/develop/src/assets/styleguide-git-banner-typography.svg"/></p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/styleguide-git/blob/v0.1.0/CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog-0.1.0-81A1C1.svg?style=flat-square"/></a> <a href="https://github.com/arcticicestudio/arcver"><img src="https://img.shields.io/badge/Versioning-ArcVer-81A1C1.svg?style=flat-square"/></a></p>
+<p align="center"><a href="https://github.com/arcticicestudio/styleguide-git/blob/v0.2.0/CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog-0.2.0-81A1C1.svg?style=flat-square"/></a> <a href="https://github.com/arcticicestudio/arcver"><img src="https://img.shields.io/badge/Versioning-ArcVer-81A1C1.svg?style=flat-square"/></a></p>
 
 <p align="center">The Arctic Ice Studio Git Style Guide.</p>
 
