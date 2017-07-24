@@ -111,8 +111,19 @@ Every branch must contain *issue ID* which is important to automatically fire so
 
 A `release` branch is used to prepare a new [tagged](#tags) release version.
 
+## Tags
+
+Arctic Ice Studio follows the [gitflow][gitflow] branching model with the deviations and additional conventions described below using the [Arctic Versioning Specification][arcver].
+
+All version tags are created in the `master` [core branch](#core-branches) to specify which commits reflects a release version as defined by the `release` [branch name](#branch-naming) prefix.
+
+* **Only use annotated tags**. Allows to include the name of the project followed by the version number to the commit message.
+* **Always add the `v` prefix character to version tags**. Clarifies the tag type as specified by ArcVer.
+* **Every version tag must be signed**. Ensures that the version has been tested and approved by the project owner or an authorized project contributor.
+
 ---
 
 <p align="center">Copyright &copy; 2017 Arctic Ice Studio<br><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-5E81AC.svg?style=flat-square"/></a></p>
 
+[arcver]: https://github.com/arcticicestudio/arcver
 [gitflow]: http://nvie.com/posts/a-successful-git-branching-model
