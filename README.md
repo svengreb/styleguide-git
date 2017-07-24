@@ -1,10 +1,12 @@
 <p align="center"><img src="https://rawgit.com/arcticicestudio/styleguide-git/develop/src/assets/styleguide-git-banner-typography.svg"/></p>
 
+<p align="center"><a href="https://github.com/arcticicestudio/styleguide-git/blob/v0.2.0/CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog-0.2.0-81A1C1.svg?style=flat-square"/></a> <a href="https://github.com/arcticicestudio/arcver"><img src="https://img.shields.io/badge/Versioning-ArcVer-81A1C1.svg?style=flat-square"/></a></p>
+
 <p align="center">The Arctic Ice Studio Git Style Guide.</p>
 
 ---
 
-To present [Git commits](https://git-scm.com/docs/git-commit) in an organized, standardized, and easy-to-read manner, this official style guide describes how the content should be structured, organized, spelled and formatted in all Arctic Ice Studio projects.
+To present Git [commits](https://git-scm.com/docs/git-commit) and [branches](https://git-scm.com/docs/git-branch) in an organized, standardized, and easy-to-read manner, this official style guide describes how the content should be structured, spelled and formatted in all Arctic Ice Studio projects.
 
 There are only some strict rules but mostly guidelines since we are more interested in content than formatting and the review process may help contributors to conform to this guide later on.
 
@@ -75,10 +77,53 @@ This metadata block **must contain the GitHub issue ID** and is **separated from
 
 **Multiple issues are separated by a comma** and **additional references** can be added in the next lines.
 
-## Development
+## Branch Naming
 
-[![](https://img.shields.io/badge/Changelog-0.1.0-81A1C1.svg?style=flat-square)](https://github.com/arcticicestudio/styleguide-git/blob/v0.1.0/CHANGELOG.md) [![](https://img.shields.io/badge/Workflow-gitflow--branching--model-81A1C1.svg?style=flat-square)](http://nvie.com/posts/a-successful-git-branching-model) [![](https://img.shields.io/badge/Versioning-ArcVer_0.8.0-81A1C1.svg?style=flat-square)](https://github.com/arcticicestudio/arcver)
+> A branch should reflect the story of the commits it contains using a valuable and useful name to clarify its purpose during the development lifecycle and the persistency in the history.
 
-<p align="center"> <img src="http://arcticicestudio.com/favicon.ico" width=16 height=16/> Copyright &copy; 2017 Arctic Ice Studio</p>
+Arctic Ice Studio follows the [gitflow][gitflow] branching model with the deviations and additional conventions described below.
 
-<p align="center"><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-5E81AC.svg?style=flat-square"/></a>
+Branches are an important major component for building open source projects regardless of the size. A well maintained branch merge story in the history will help to increase the long-term overall quality.
+
+### Core Branches
+
+The two infinite development lifecycle core branches must be lowercase named `master` and `develop`.
+
+### Story Branches
+
+The lowercase name of a limited development lifecycle story branch must reflect the *type* separated by a slash from the *issue ID* and followed by the short and descriptive *title* using hypen delimiters.
+
+`<TYPE>/<ISSUE_ID>-<TITLE>`
+
+Example: `feature/gh-17-tokenizer-api`
+
+**Story Type Prefixes**
+
+* `feature`
+* `improvement`
+* `bugfix`
+* `test`
+* `task`
+* `subtask`
+* `release`
+
+Every branch must contain *issue ID* which is important to automatically fire some hooks to track the commit in the related GitHub repository issues and pull requests and is **required to contribute to a project**.
+
+A `release` branch is used to prepare a new [tagged](#tags) release version.
+
+## Tags
+
+Arctic Ice Studio follows the [gitflow][gitflow] branching model with the deviations and additional conventions described below using the [Arctic Versioning Specification][arcver].
+
+All version tags are created in the `master` [core branch](#core-branches) to specify which commits reflects a release version as defined by the `release` [branch name](#branch-naming) prefix.
+
+* **Only use annotated tags**. Allows to include the name of the project followed by the version number to the commit message.
+* **Always add the `v` prefix character to version tags**. Clarifies the tag type as specified by ArcVer.
+* **Every version tag must be signed**. Ensures that the version has been tested and approved by the project owner or an authorized project contributor.
+
+---
+
+<p align="center">Copyright &copy; 2017 Arctic Ice Studio<br><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-5E81AC.svg?style=flat-square"/></a></p>
+
+[arcver]: https://github.com/arcticicestudio/arcver
+[gitflow]: http://nvie.com/posts/a-successful-git-branching-model
