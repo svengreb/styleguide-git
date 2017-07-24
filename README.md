@@ -75,6 +75,16 @@ This metadata block **must contain the GitHub issue ID** and is **separated from
 
 **Multiple issues are separated by a comma** and **additional references** can be added in the next lines.
 
+## Tags
+
+Arctic Ice Studio follows the [gitflow][gitflow] branching model with the deviations and additional conventions described below using the [Arctic Versioning Specification][arcver].
+
+All version tags are created in the `master` [core branch](#core-branches) to specify which commits reflects a release version as defined by the `release` [branch name](#branch-naming) prefix.
+
+* **Only use annotated tags**. Allows to include the name of the project followed by the version number to the commit message.
+* **Always add the `v` prefix character to version tags**. Clarifies the tag type as specified by ArcVer.
+* **Every version tag must be signed**. Ensures that the version has been tested and approved by the project owner or an authorized project contributor.
+
 ## Development
 
 [![](https://img.shields.io/badge/Changelog-0.1.0-81A1C1.svg?style=flat-square)](https://github.com/arcticicestudio/styleguide-git/blob/v0.1.0/CHANGELOG.md) [![](https://img.shields.io/badge/Workflow-gitflow--branching--model-81A1C1.svg?style=flat-square)](http://nvie.com/posts/a-successful-git-branching-model) [![](https://img.shields.io/badge/Versioning-ArcVer_0.8.0-81A1C1.svg?style=flat-square)](https://github.com/arcticicestudio/arcver)
@@ -82,3 +92,6 @@ This metadata block **must contain the GitHub issue ID** and is **separated from
 <p align="center"> <img src="http://arcticicestudio.com/favicon.ico" width=16 height=16/> Copyright &copy; 2017 Arctic Ice Studio</p>
 
 <p align="center"><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-5E81AC.svg?style=flat-square"/></a>
+
+[gitflow]: http://nvie.com/posts/a-successful-git-branching-model
+[arcver]: https://github.com/arcticicestudio/arcver
