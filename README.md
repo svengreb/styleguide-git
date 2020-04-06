@@ -121,9 +121,11 @@ All version tags are created in the `master` [core branch](#core-branches) to sp
 * **Always add the `v` prefix character to version tags**. Clarifies the tag type as specified by ArcVer.
 * **Every version tag must be signed**. Ensures that the version has been tested and approved by the project owner or an authorized project contributor.
 
----
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/nord/repository-footer-separator.svg?sanitize=true" /></p>
 
-<p align="center">Copyright &copy; 2017 Arctic Ice Studio<br><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-5E81AC.svg?style=flat-square"/></a></p>
+<p align="center">Copyright &copy; 2017-present <a href="https://www.arcticicestudio.com" target="_blank">Arctic Ice Studio</a> and <a href="https://www.svengreb.de" target="_blank">Sven Greb</a></p>
+
+<p align="center"><a href="https://github.com/arcticicestudio/styleguide-git/blob/develop/LICENSE.md"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&logo=github&colorA=4c566a&colorB=88c0d0"/></a></p>
 
 [arcver]: https://github.com/arcticicestudio/arcver
 [gitflow]: http://nvie.com/posts/a-successful-git-branching-model
